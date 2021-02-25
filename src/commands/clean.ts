@@ -1,12 +1,12 @@
 import { CliCommand, Shell } from '@doptools/tslib-cli-core';
 import Command from '@oclif/command';
 @CliCommand({
-  description: 'Build the project'
+  description: 'Clean the project build cache'
 })
-export default class BuildProjectCommand extends Command {
+export default class CleanProjectCommand extends Command {
 
   async run(): Promise<void> {
-    Shell.exec(`yarn build`);
+    Shell.exec(`yarn clean`);
   }
 
 }
